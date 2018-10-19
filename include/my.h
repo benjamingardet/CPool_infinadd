@@ -27,6 +27,7 @@ enum compare_sub
 
 /* PROG FUNCS */
 
+char *skip_zeros(char *);
 int input_errors(char **);
 void infin_add(char **);
 int which_operation(char *, char *);

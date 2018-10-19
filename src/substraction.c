@@ -47,5 +47,6 @@ char *substraction(char *res, char *nb1, char *nb2, int ret)
         res = do_my_sub(res, my_revstr(nb1), my_revstr(nb2), ret);
         res = my_advanced_strcat('-', res);
     }
+    res = skip_zeros(res);
     return (res);
 }

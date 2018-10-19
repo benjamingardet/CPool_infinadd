@@ -5,7 +5,22 @@
 ** parsing
 */
 
+#include <stdlib.h>
 #include "my.h"
+
+char *skip_zeros(char *res)
+{
+    int i = (res[0] == '-') ? 1 : 0;
+    char *tmp = NULL;
+
+    while (res[i] != '\0' && res[i] == '0')
+        i += 1;
+    tmp = my_strdup(res + i);
+    if (res[0] == '-')
+        tmp = my_advanced_strcat('-', tmp);
+    free(res);
+    return (tmp);    
+}
 
 int who_is_smaller(char *nb1, char *nb2)
 {
